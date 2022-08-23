@@ -13,10 +13,23 @@ The stunner-editors package contains the BPMN, DMN, and SceSim Editors that are 
   <li>pnpm -F @kie-tools/stunner-editors... build:dev</li>
 </ol>
 
-# To build and run this
+# To  Build
 
+## First Time Build
 <ol>
   <li>docker build -t sigmaoutdoors/kie-stunner-editor-prereq .</li>
+</ol>
+
+## To Build and get latest KIE Source --no-cache
+<ol> 
+  <li>docker build --no-cache -t sigmaoutdoors/kie-stunner-editor-prereq .</li>
+</ol>
+
+
+# Run and Shell into Container
+<ol>
+  <li>docker build -t sigmaoutdoors/kie-stunner-editor-prereq .</li>
+  <li>docker build --no-cache -t sigmaoutdoors/kie-stunner-editor-prereq .</li>
   <li>docker run --detach --name kie-stunner-editor sigmaoutdoors/kie-stunner-editor-prereq</li>
   <li>docker exec -it kie-stunner-editor  /bin/sh -l -o vi</li>
 </ol>
