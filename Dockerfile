@@ -16,12 +16,13 @@ RUN dnf install -y  curl
 RUN dnf install -y  npm
 RUN dnf install -y  zip
 RUN curl https://github.com/kiegroup/kie-tools/archive/refs/heads/main.zip -L -o /tmp/kie-git-download.zip
-RUN npm install -g pnpm
+RUN npm install -g pnpm@7.0.0
 RUN dnf install -y epel-release
 RUN dnf install -y chromium
 RUN dnf install -y gtk3-devel
 RUN dnf -y makecache
 RUN dnf -y install libappindicator-gtk3-devel
+RUN npm install -g http-server
 
 #Unzip to /etc where there is more room.
 RUN unzip -o -d /etc /tmp/kie-git-download.zip
